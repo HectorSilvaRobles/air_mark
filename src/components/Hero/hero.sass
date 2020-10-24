@@ -1,4 +1,126 @@
+$font-type: arial
+$main-color: #0026C6
+
 .hero 
     height: 800px
-    background: blue
-    width: 100%;
+    background-image: url('../../assets/hero.jpg')
+    background-size: cover
+    background-position: bottom
+    width: 100%
+
+.hero-shade
+    height: 100%
+    width: 100%
+    background: rgba(0, 0, 0, 0.6)
+    display: flex
+    justify-content: center
+    align-items: center
+
+.hero-info
+    height: 45%
+    width: 80%
+
+.hero-text
+    height: 70%
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column;
+    color: white;
+    cursor: default
+
+.hero-text > h1 
+    font-size: calc(80px + (100 - 80) * ((100vw - 1100px) / (1800 - 1100)))
+    font-family: $font-type
+    font-weight: bold
+    text-align: center
+    margin-bottom: 15px;
+
+.hero-text > h2
+    font-size: calc(50px + (60 - 50) * ((100vw - 1100px) / (1800 - 1100)))
+    font-family: $font-type
+    text-align: center
+    font-weight: bold
+
+
+.hero-button 
+    height: 30%
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+
+.hero-button > button 
+    height: 100%
+    width: 25%
+    margin: 0 50px
+    border-radius: 1000px
+    font-weight: bold
+    font-family: $font-type
+    font-size: calc(30px + (35 - 30) * ((100vw - 1100px) / (1800 - 1100)))
+    border: none
+    cursor: pointer
+
+.hero-button > button:focus
+    outline: none
+
+.hero-quote
+    color: white
+    background: $main-color
+
+.hero-learn
+    background: white
+    color: $main-color
+
+
+// Mobile view
+@media screen and (max-width: 500px)
+    .hero
+        height: 700px
+
+    .hero-info
+        height: 60%
+        width: 100%
+    
+    .hero-text
+        height: 50%
+    
+    .hero-text > h1
+        font-size: calc(45px + (60 - 45) * ((100vw - 300px) / (500 - 300)))
+        width: 95%;
+    
+    .hero-text > h2
+        font-size: calc(25px + (30 - 25) * ((100vw - 300px) / (500 - 300)))
+        width: 85%
+    
+    .hero-button
+        height: 50%
+        flex-direction: column
+        justify-content: space-evenly
+
+    .hero-button > button
+        width: 70%
+        height: 35%
+        margin: 10px 0
+
+
+@media screen and (max-width: 800px) and (min-width: 501px)
+    .hero
+        height: 750px
+    
+    .hero-info 
+        height: 50%
+        width: 85%
+    
+    .hero-text > h1
+        font-size: calc(60px + (70 - 60) * ((100vw - 501px) / (800 - 501)))
+        
+    .hero-text > h2
+        font-size: calc(30px + (35 - 30) * ((100vw - 501px) / (800 - 501)))
+        width: 80%;
+    
+    .hero-button > button
+        width: 35%
+        height: 80%
+        margin: 0 20px
