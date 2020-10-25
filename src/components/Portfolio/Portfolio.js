@@ -4,7 +4,8 @@ import './portfolio.sass'
 const Portfolio = () => {
     return (
         <div className='portfolio'>
-            Portfolio
+            <div className='portfolio-header'></div>
+            <div className='portfolio-body'></div>
         </div>
     )
 }

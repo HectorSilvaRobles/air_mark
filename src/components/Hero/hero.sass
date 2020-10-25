@@ -2,7 +2,7 @@ $font-type: arial
 $main-color: #0026C6
 
 .hero 
-    height: 800px
+    height: 750px
     background-image: url('../../assets/hero.jpg')
     background-size: cover
     background-position: bottom
@@ -77,7 +77,7 @@ $main-color: #0026C6
 // Mobile view
 @media screen and (max-width: 500px)
     .hero
-        height: 700px
+        height: 650px
 
     .hero-info
         height: 60%
@@ -107,20 +107,81 @@ $main-color: #0026C6
 
 @media screen and (max-width: 800px) and (min-width: 501px)
     .hero
-        height: 750px
+        height: 650px
     
     .hero-info 
         height: 50%
-        width: 85%
+        width: 90%
     
     .hero-text > h1
         font-size: calc(60px + (70 - 60) * ((100vw - 501px) / (800 - 501)))
+        margin-bottom: 10px
         
     .hero-text > h2
         font-size: calc(30px + (35 - 30) * ((100vw - 501px) / (800 - 501)))
-        width: 80%;
+        width: 70%;
     
     .hero-button > button
-        width: 35%
+        width: 40%
         height: 80%
         margin: 0 20px
+
+
+// Tablet View
+@media screen and (max-width: 1100px) and (min-width: 801px)
+    .hero
+        height: 650px
+    
+    .hero-info
+        height: 40%
+        width: 90%
+
+    .hero-text
+        height: 60%
+    
+    .hero-text > h1
+        font-size: calc(58px + (70 - 58) * ((100vw - 801px) / (1100 - 801)))
+        margin-bottom: 10px
+        
+    .hero-text > h2
+        font-size: calc(35px + (40 - 35) * ((100vw - 801px) / (1100 - 801)))
+
+    .hero-button
+        height: 40%
+
+    .hero-button > button 
+        margin: 0 30px
+        width: 35%
+        height: 90%
+
+
+// Small Laptop View
+@media screen and (min-width: 1101px) and (max-width: 1300px)
+    .hero
+        height: 700px
+
+    .hero-info
+        width: 90%
+
+    .hero-text > h1
+        margin-bottom: 10px
+    
+    .hero-button > button
+        width: 30%
+        margin: 0 30px
+
+
+@media screen and (min-width: 1901px)
+    .hero
+        height: 900px
+
+    .hero-text > h1
+        font-size: calc(110px + (130 - 110) * ((100vw - 1901px) / (2400 - 1901)))
+        margin-bottom: 10px
+        
+    .hero-text > h2
+        font-size: calc(60px + (70 - 60) * ((100vw - 1901px) / (2400 - 1901)))
+
+@media screen and (min-width : 2300px)
+    .hero
+        height: 1000px
