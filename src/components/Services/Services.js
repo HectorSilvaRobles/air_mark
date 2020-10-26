@@ -5,7 +5,7 @@ import './services.sass'
 const Services = () => {
     const [mainCard, setMainCard] = useState({
         "icon": <FaTools />,
-        "title" : "Office Installation & Reconfiguration",
+        "title" : "Install & Reconfigure",
         "description": "Short description of the service. Keep It simple, between 2-3 sentences. This would be the third sentence.",
         "cardId": 1
     })
@@ -29,50 +29,50 @@ const Services = () => {
                     <div 
                         onClick={() => setMainCard({
                             "icon": <FaTools />,
-                            "title" : "Office Installation & Reconfiguration",
+                            "title" : "Install & Reconfigure",
                             "description": "Short description of the service. Keep It simple, between 2-3 sentences. This would be the third sentence.",
                             "cardId": 1
                         })}
                         id={mainCard["cardId"] === 1 ? 'active-card' : null}
                     >
                         <FaTools />
-                        <h1>Office Installation & Reconfiguration</h1>
+                        <h1>Install & Reconfigure</h1>
                     </div>
                     <div
                         onClick={() => setMainCard({
                             "icon": <FaTruckLoading />,
-                            "title" : "Office Moving & Relocation",
+                            "title" : "Moving & Relocation",
                             "description": "Short description of the service. Keep It simple, between 2-3 sentences. This would be the third sentence.",
                             "cardId": 2
                         })}
                         id={mainCard["cardId"] === 2 ? 'active-card' : null}
                     >
                         <FaTruckLoading />
-                        <h1>Office Moving & Relocation</h1>
+                        <h1>Moving & Relocation</h1>
                     </div>
                     <div
                         onClick={() => setMainCard({
                             "icon": <FaTruckMoving />,
-                            "title" : "Commercial Delivery & Pickup",
+                            "title" : "Delivery & Pickup",
                             "description": "Short description of the service. Keep It simple, between 2-3 sentences. This would be the third sentence.",
                             "cardId": 3
                         })}
                         id={mainCard["cardId"] === 3 ? 'active-card' : null}
                     >
                         <FaTruckMoving />
-                        <h1>Commercial Delivery & Pickup</h1>
+                        <h1>Delivery & Pickup</h1>
                     </div>
                     <div
                         onClick={() => setMainCard({
                             "icon": <FaWarehouse />,
-                            "title" : "Warehousing & Storage",
+                            "title" : "Warehouse & Storage",
                             "description": "Short description of the service. Keep It simple, between 2-3 sentences. This would be the third sentence.",
                             "cardId": 4
                         })}
                         id={mainCard["cardId"] === 4 ? 'active-card' : null}
                     >
                         <FaWarehouse />
-                        <h1>Warehousing & Storage</h1>
+                        <h1>Warehouse & Storage</h1>
                     </div>
 
                 </div>
