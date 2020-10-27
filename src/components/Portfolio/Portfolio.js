@@ -15,8 +15,8 @@ const settings = {
     slidesToScroll: 1,
     className: 'portfolio-card',
     arrow: false,
-    // autoplay: true,
-    // autoplaySpeed: 2500
+    autoplay: true,
+    autoplaySpeed: 2500
   };
 
 const Portfolio = () => {
