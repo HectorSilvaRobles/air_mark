@@ -2,21 +2,21 @@ $font-type: arial
 $main-color: #0026C6
 $second-color: #5c5c5c
 
-.getToKnow
+.qualified
     height: 700px
     width: 100%
     display: flex
-    align-items: center
     justify-content: center
+    align-items: center
 
-.getToKnow-header
+.qualified-header
     width: 40%
     height: 70%
     display: flex
     flex-direction: column
     justify-content: center
 
-.getToKnow-header > h1
+.qualified-header > h1
     font-family: $font-type
     font-weight: bold
     color: $main-color
@@ -24,120 +24,119 @@ $second-color: #5c5c5c
     cursor: default
     margin-bottom: 5px
 
-.getToKnow-header > h2
+.qualified-header > h2
     font-family: $font-type
     color: $second-color
     font-size: calc(35px + (40 - 35) * ((100vw - 1450px) / (1800 - 1450)))
     cursor: default
 
-.getToKnow-body
+.qualified-body
     width: 30%
     height: 70%
     display: flex
+    justify-content: flex-end
     align-items: center
-    justify-content: flex-start
-    
 
-.getToKnow-body > img
-    width: 400px
+.qualified-body > img
+    width: 450px
     height: 400px
 
 
 @media screen and (max-width: 900px)
-    .getToKnow
-        flex-direction: column-reverse
+    .qualified
+        flex-direction: column
     
-    .getToKnow-header
+    .qualified-header
         width: 90%
-        height: 35%
-        justify-content: center
-        align-items: center
+        height: 30%
     
-    .getToKnow-header > h1
+    .qualified-header > h1
         font-size: calc(45px + (55 - 45) * ((100vw - 300px) / (600 - 300)));
         text-align: center
-        width: 70%
     
-
-    .getToKnow-header > h2
+    .qualified-header > h2
         font-size: calc(20px + (28 - 20) * ((100vw - 300px) / (600 - 300)));
         text-align: center
     
-    .getToKnow-body 
-        width: 100%
-        height: 40%
+    .qualified-body
+        width: 90%
+        height: 45%
         justify-content: center
     
-    .getToKnow-body > img
-        width: 350px
+    .qualified-body > img
         height: 300px
-    
+        width: 350px
+
 
 @media screen and (min-width: 501px) and (max-width: 701px)
-    .getToKnow-header > h1
-        width: 90%
+    .qualified
+        height: 800px
     
-    .getToKnow-body
-        height: 45%
+    .qualified-header
+        height: 25%
     
-    .getToKnow-body > img
-        width: 450px
-        height: 400px
+    .qualified-body
+        height: 40%
+    
+    .qualified-body > img
+        height: 350px
+        width: 400px
 
 
 @media screen and (min-width: 701px) and (max-width: 900px)
-    .getToKnow-header
+    .qualified-header
+        align-items: center
         height: 25%
-    
-    .getToKnow-header > h1
+
+    .qualified-header > h1
         font-size: calc(50px + (55 - 50) * ((100vw - 700px) / (900 - 700)));
 
-    .getToKnow-header > h2
+    .qualified-header > h2
         font-size: calc(25px + (30 - 25) * ((100vw - 700px) / (900 - 700)));
         width: 95%
-
-
-    .getToKnow-body
-        height: 50%
     
-    .getToKnow-body > img
-        height: 400px
-        width: 450px
-
+    .qualified-body > img
+        height: 350px
+        width: 400px
+    
 
 @media screen and (min-width: 901px) and (max-width: 1100px)
-    .getToKnow
+    .qualified
         height: 600px
     
-    .getToKnow-body
-        width: 45%
-    
-    .getToKnow-header
-        width: 45%
-    
-    .getToKnow-header > h1
+    .qualified-header > h1
         font-size: calc(50px + (55 - 50) * ((100vw - 900px) / (1100 - 900)));
 
-    .getToKnow-header > h2
+    .qualified-header > h2
         font-size: calc(25px + (30 - 25) * ((100vw - 900px) / (1100 - 900)));
+
+    .qualified-body, .qualified-header
+        width: 45%
+    
+    .qualified-body
+        justify-content: flex-end
+    
+    .qualified-body > img
+        height: 350px
+        width: 400px
 
 
 @media screen and (min-width: 1101px) and (max-width: 1450px)
-    .getToKnow-header
+    .qualified-header
         width: 45%
-    .getToKnow-body
-        width: 40%
 
+    .qualified-body
+        width: 40% 
 
 @media screen and (min-width: 1800px)
-    .getToKnow-body > img
-        width: 500px
-        height: 500px
-    .getToKnow
-        height : 900px
+    .qualified
+        height: 900px
 
+    .qualified-body > img
+        height: 500px
+        width: 550px
 
 @media screen and (min-width: 2100px)
-    .getToKnow-body > img
-        width: 600px
+    .qualified-body > img
         height: 600px
+        width: 650px
