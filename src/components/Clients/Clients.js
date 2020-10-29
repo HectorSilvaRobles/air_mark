@@ -45,7 +45,7 @@ const settings = {
 
 const Clients = () => {
     return (
-        <div className='clients'>
+        <div className='clients' id='clients'>
             <div className='clients-header'>
                 <h1>Our Clients</h1>
                 <h2>Businesses and oraganizations we’ve worked with.</h2>

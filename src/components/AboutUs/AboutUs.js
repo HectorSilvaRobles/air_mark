@@ -5,7 +5,7 @@ import './aboutus.sass'
 
 const AboutUs = () => {
     return (
-        <div className='aboutus'>
+        <div className='aboutus' id='aboutUs'>
             <GetToKnow />
             <Qualified />
         </div>

@@ -4,7 +4,11 @@ import './footer.sass'
 const Footer = () => {
     return (
         <div className='footer'>
-            Footer
+            <div className='footer-cta'>
+                <h1>Interested? Lets Begin.</h1>
+                <button>Get Quote</button>
+            </div>
+            <div className='footer-menu'></div>
         </div>
     )
 }

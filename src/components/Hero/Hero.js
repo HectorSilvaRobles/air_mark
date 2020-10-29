@@ -3,7 +3,7 @@ import './hero.sass';
 
 const Hero = () => {
     return (
-        <div className='hero'>
+        <div className='hero' id='hero'>
             <div className='hero-shade'>
                 <div className='hero-info'>
                     <div className='hero-text'>

@@ -5,6 +5,7 @@ import work2 from '../../assets/work2.png'
 import work3 from '../../assets/work3.png'
 import work4 from '../../assets/work4.png'
 import work5 from '../../assets/work5.png'
+import work6 from '../../assets/work6.jpg'
 import './portfolio.sass'
 
 const settings = {
@@ -21,7 +22,7 @@ const settings = {
 
 const Portfolio = () => {
     return (
-        <div className='portfolio'>
+        <div className='portfolio' id='portfolio'>
             <div className='portfolio-header'>
                 <h1>Previous Work</h1>
                 <h2>Check out the projects we've completed in the past.</h2>
@@ -60,6 +61,13 @@ const Portfolio = () => {
                         <div className='p-card'>
                             <div>
                                 <img src={work5} />
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div className='p-card'>
+                            <div>
+                                <img src={work6} />
                             </div>
                         </div>
                     </div>
