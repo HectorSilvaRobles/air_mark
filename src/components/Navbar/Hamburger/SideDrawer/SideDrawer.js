@@ -1,35 +1,26 @@
-import React, {useState} from 'react'
+import React from 'react'
+import './sidedrawer.sass'
 import {Link} from 'react-scroll'
-import Backdrop from './Hamburger/Backdrop/Backdrop'
-import SideDrawer from './Hamburger/SideDrawer/SideDrawer'
-import ToggleButton from './Hamburger/Togglebutton/ToggleButton'
-import './navbar.sass'
 
-const Navbar = () => {
-    const [drawerOpen, setDrawerOpen] = useState(false)
-
-    // For toggling hamburger menu
-    const drawerToggleClick = () => {
-        setDrawerOpen(!drawerOpen)
-    }
-    
-    const backdropClick = () => {
-        setDrawerOpen(false)
+export default function SideDrawer(props){
+    let drawerClasses = 'drawer'
+    console.log(props)
+    if(props.show){
+        drawerClasses = 'drawer open'
     }
 
-    console.log(drawerOpen)
 
     return (
-        <div className='navbar'>
-            <div className='navbar-logo'></div>
-            <div className='navbar-menu'>
-                <Link
+        <div className={drawerClasses}>
+            <Link
                     activeClass='active-menu'
                     to='hero'
                     spy={true}
                     smooth={true}
                     duration={500}
                     offset={-70}
+                    onClick={props.close}
+
                 >Home</Link>
                 <Link
                     activeClass='active-menu'
@@ -37,7 +28,7 @@ const Navbar = () => {
                     spy={true}
                     smooth={true}
                     duration={500}
-                    // offset={-70}
+                    onClick={props.close}
                 >Services</Link>
                 <Link
                     activeClass='active-menu'
@@ -45,7 +36,8 @@ const Navbar = () => {
                     spy={true}
                     smooth={true}
                     duration={500}
-                    // offset={-70}
+                    onClick={props.close}
+
                 >Portfolio</Link>
                 <Link
                     activeClass='active-menu'
@@ -53,7 +45,8 @@ const Navbar = () => {
                     spy={true}
                     smooth={true}
                     duration={500}
-                    // offset={-70}
+                    onClick={props.close}
+
                 >Clients</Link>
                 <Link
                     activeClass='active-menu'
@@ -61,16 +54,9 @@ const Navbar = () => {
                     spy={true}
                     smooth={true}
                     duration={500}
-                    // offset={-70}
+                    onClick={props.close}
+
                 >About Us</Link>
-            </div>
-            <div className='togglebutton'>
-                <ToggleButton click={drawerToggleClick} />
-                <SideDrawer show={drawerOpen} close={drawerToggleClick} />
-                {drawerOpen !== false ? <Backdrop click={backdropClick} /> : null}
-            </div>
         </div>
     )
 }
-
-export default Navbar

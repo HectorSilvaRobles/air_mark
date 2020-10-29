@@ -1,4 +1,47 @@
+$font-type: arial
+$main-color: #0026C6
+
 .footer
-    background: pink
-    height: 400px
+    background: $main-color
+    height: 500px
     width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+.footer-cta
+    height: 70%
+    width: 70%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+.footer-cta > h1
+    font-size: calc(70px + (80 - 70) * ((100vw - 1450px) / (1800 - 1450)))
+    font-family: $font-type
+    font-weight: bold
+    cursor: default
+    color: white
+    margin-bottom: 20px
+
+.footer-cta > button
+    background: white
+    border: none
+    cursor: pointer
+    height: 25%
+    width: 30%
+    border-radius: 100px
+    color: $main-color
+    font-weight: bold
+    font-family: $font-type
+
+
+.footer-cta > button:focus
+    outline: none
+
+.footer-menu
+    height: 30%
+    width: 90%
+    background: green
