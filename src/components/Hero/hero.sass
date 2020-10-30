@@ -51,7 +51,7 @@ $main-color: #0026C6
     justify-content: center
     align-items: center
 
-.hero-button > button 
+.hero-button > button
     height: 100%
     width: 25%
     margin: 0 50px
@@ -61,6 +61,23 @@ $main-color: #0026C6
     font-size: calc(30px + (35 - 30) * ((100vw - 1100px) / (1800 - 1100)))
     border: none
     cursor: pointer
+
+.hero-button > a
+    background: white
+    width: 25%
+    height: 100%
+    border-radius: 1000px
+    overflow: hidden
+
+.hero-button > a > button
+    font-weight: bold
+    font-family: $font-type
+    font-size: calc(30px + (35 - 30) * ((100vw - 1100px) / (1800 - 1100)))
+    border: none
+    cursor: pointer
+    height: 100%
+    width: 100%
+    
 
 .hero-button > button:focus
     outline: none
@@ -72,6 +89,18 @@ $main-color: #0026C6
 .hero-learn
     background: white
     color: $main-color
+
+.modal-backdrop
+    width: 100%
+    height: 100%
+    background: rgba(0,0,0,0.5)
+    display: flex
+    justify-content: center
+    align-items: center
+    
+.modal-backdrop:focus
+    outline: none
+
 
 
 // Mobile view
