@@ -9,19 +9,28 @@ export default class Modal extends Component {
         super(props)
 
         this.state = {
-            view: 'view1'
+            view: 'view1',
+            services: []
         }
     }
 
+    handleServiceSelect = (service) => {
+        this.setState({services: service})
+    }
+
+    handleView = (view) => {
+        this.setState({view: view})
+    }
+
     render(){
-        console.log(this.state.view)
+        console.log(this.state)
         return (
             <div className='modal'>
                 <div className='modal-top'>
                     <div className='modal-top-space'></div>
                     <div className='modal-dots'>
-                        <div onClick={() => this.setState({view: 'view1'})} className={this.state.view === 'view1' ? 'modal-dot-active' : null}></div>
-                        <div onClick={() => this.setState({view: 'view2'})} className={this.state.view === 'view2' ? 'modal-dot-active' : null}></div>
+                        <div onClick={() => this.handleView('view1')} className={this.state.view === 'view1' ? 'modal-dot-active' : null}></div>
+                        <div onClick={() => this.handleView('view2')} className={this.state.view === 'view2' ? 'modal-dot-active' : null}></div>
                     </div>
                     <div className='modal-top-space'>
                         <IoIosCloseCircleOutline onClick={this.props.onClose} />
@@ -29,7 +38,7 @@ export default class Modal extends Component {
                 </div>
                 
                 <div className='modal-view'>
-                    {this.state.view === 'view1' ? <View1 /> : <View2 />}
+                    {this.state.view === 'view1' ? <View1 state={this.state} handleService={this.handleServiceSelect} view={this.handleView} /> : <View2 />}
                 </div>
             </div>
         )
