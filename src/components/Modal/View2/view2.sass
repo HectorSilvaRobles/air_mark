@@ -1,4 +1,95 @@
+$font-type: arial
+$main-color: #0026C6
+$second-color: #5c5c5c
+$card-color: #f2f2f2
+$card-shadow: 0px 0px 5px 0px rgba(92,92,92,0.4)
+
 .view2
-    background: green
     height: 100%
     width: 100%
+
+.view2-content
+    height: 85%
+    width: 100%
+
+.view2-form
+    height: 75%
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-around
+
+
+.view2-form > div
+    height: 30%
+    width: 70%
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    flex-direction: column
+
+.view2-form > div > input, .view2-form > .form-input-error > input
+    width: 100%
+    height: 60%
+    border-radius: 1000px
+    border: none
+    box-shadow: $card-shadow
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box; 
+    padding-left: 30px
+    font-size: 20px
+
+.view2-form > div > input:focus, .view2-form > .form-input-error > input:focus
+    outline: none
+
+.view2-form > .form-input-error > input
+    box-shadow: 0 0 0 2px red
+
+.form-title
+    width: 90%
+    height: 25%
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    margin-bottom: 10px
+
+.form-title > h1
+    font-family: arial
+    text-align: left
+    font-size: 30px
+    font-weight: bold
+    color: $main-color
+
+.form-title > h2
+    font-family: arial
+    font-size: 18px
+    color: red
+
+.error-text
+    height: 20%
+    width: 100%
+    background: orange
+
+.view2-button
+    height: 25%
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+
+.view2-button > button
+    height: 90px
+    width: 70%
+    border: none
+    border-radius: 1000px
+    font-size: 40px
+    font-weight: bold
+    text-transform: uppercase
+    background: #d8d8d8
+    color: white
+
+.view2-button > button:focus
+    outline: none
+
