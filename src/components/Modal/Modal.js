@@ -38,7 +38,14 @@ export default class Modal extends Component {
                 </div>
                 
                 <div className='modal-view'>
-                    {this.state.view === 'view1' ? <View1 state={this.state} handleService={this.handleServiceSelect} view={this.handleView} /> : <View2 />}
+                    {this.state.view === 'view1' ? 
+                        <View1 
+                            state={this.state} 
+                            handleService={this.handleServiceSelect} 
+                            view={this.handleView} 
+                        /> 
+                        : 
+                        <View2 />}
                 </div>
             </div>
         )
