@@ -1,7 +1,9 @@
 import React, {Component} from 'react'
 import View1 from './View1/View1'
 import View2 from './View2/View2'
-import {IoIosCloseCircleOutline} from 'react-icons/io'
+import ThankYou from './thankyou/ThankYou'
+import {IoMdClose} from 'react-icons/io'
+import {ImArrowLeft} from 'react-icons/im'
 import './modal.sass'
 
 export default class Modal extends Component {
@@ -25,18 +27,21 @@ export default class Modal extends Component {
     render(){
         console.log(this.state)
         return (
-            <div className='modal'>
-                <div className='modal-top'>
-                    <div className='modal-top-space'></div>
-                    <div className='modal-dots'>
-                        <div onClick={() => this.handleView('view1')} className={this.state.view === 'view1' ? 'modal-dot-active' : null}></div>
-                        <div onClick={() => this.handleView('view2')} className={this.state.view === 'view2' ? 'modal-dot-active' : null}></div>
+            <div className={this.state.view === 'thankyou' ? 'modal-thankyou' : 'modal'}>
+                {this.state.view === 'thankyou' ? null : 
+                    <div className='modal-top'>
+                        <div className='modal-top-space'>
+                            {this.state.view === 'view2' ? <ImArrowLeft onClick={() => this.handleView('view1')} /> : null}
+                        </div>
+                        <div className='modal-dots'>
+                            <div onClick={() => this.handleView('view1')} className={this.state.view === 'view1' ? 'modal-dot-active' : null}></div>
+                            <div onClick={() => this.handleView('view2')} className={this.state.view === 'view2' ? 'modal-dot-active' : null}></div>
+                        </div>
+                        <div className='modal-top-space'>
+                            <IoMdClose onClick={this.props.onClose} />
+                        </div>
                     </div>
-                    <div className='modal-top-space'>
-                        <IoIosCloseCircleOutline onClick={this.props.onClose} />
-                    </div>
-                </div>
-                
+                }
                 <div className='modal-view'>
                     {this.state.view === 'view1' ? 
                         <View1 
@@ -45,7 +50,16 @@ export default class Modal extends Component {
                             view={this.handleView} 
                         /> 
                         : 
-                        <View2 />}
+                        null}
+                    {this.state.view === 'view2' ? 
+                        <View2
+                            view={this.handleView}
+                            handleService={this.handleServiceSelect}
+                         /> 
+                         : 
+                         null}
+                    {this.state.view === 'thankyou' ? <ThankYou onClose={this.props.onClose} /> : null}
+                    
                 </div>
             </div>
         )
