@@ -12,12 +12,17 @@ export default class Modal extends Component {
 
         this.state = {
             view: 'view1',
-            services: []
+            services: [],
+            info: {}
         }
     }
 
     handleServiceSelect = (service) => {
         this.setState({services: service})
+    }
+
+    handleInfoUpdate = (info) => {
+        this.setState({info: info})
     }
 
     handleView = (view) => {
@@ -54,7 +59,8 @@ export default class Modal extends Component {
                     {this.state.view === 'view2' ? 
                         <View2
                             view={this.handleView}
-                            handleService={this.handleServiceSelect}
+                            handleInfo={this.handleInfoUpdate}
+                            state={this.state}
                          /> 
                          : 
                          null}

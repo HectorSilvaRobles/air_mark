@@ -31,11 +31,13 @@ const View2 = (props) => {
                 validationSchema={validationSchema}
                 onSubmit={values => {
                     console.log(values)
+                    props.handleInfo(values)
                     props.view('thankyou')
                 }}
             >
-            {({values,errors, touched}) => (
+            {({values,errors, touched, handleChange}) => (
                 <Form className='view2-content'>
+                {console.log(Boolean(values.name))}
                     <div className='view2-form'>
                         <div className={errors.name && touched.name ? 'form-input-error' : null}>
                             <div className='form-title'>
@@ -73,8 +75,8 @@ const View2 = (props) => {
                     </div>
                     <div className='view2-button'>
                         <button 
-                            className={errors.name || errors.email || errors.phone ? null : 'modal-button-active' }
-                            disabled={errors.name ||  errors.email || errors.phone ? true : false}
+                            className={errors.name || errors.email || errors.phone || !values.name || !values.email || !values.phone ? null : 'modal-button-active' }
+                            disabled={errors.name ||  errors.email || errors.phone || !values.name || !values.email || !values.phone ? true : false}
                             // onClick={() => {
                             //     props.handleService(serviceState)
                             //     props.view('view2')

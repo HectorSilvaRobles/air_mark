@@ -1,11 +1,12 @@
 import React from 'react'
+import {IoMdClose} from 'react-icons/io'
 import './thankyou.sass'
 
 const ThankYou = (props) => {
     return (
         <div className='thankyou'>
             <div className='thankyou-title'>
-                <div onClick={() => props.onClose()}>X</div>
+                <div onClick={() => props.onClose()}><IoMdClose /></div>
             </div>
             <div className='thankyou-body'>
                 <h1>Thank You.</h1>

@@ -52,4 +52,23 @@ $card-shadow: 0px 0px 10px 0px rgba(92,92,92,0.4)
     
 
 @media screen and (max-width: 900px)
-    .thankyou
+    .thankyou-body > h1
+        font-size: calc(40px + (60 - 40) * ((100vw - 300px) / (600 - 300)))
+    
+    .thankyou-body > h2
+        width: 80%
+        font-size: calc(18px + (25 - 18) * ((100vw - 300px) / (600 - 300)))
+
+    .thankyou-title
+        height: 25%
+    
+    .thankyou-body
+        height: 50%
+
+
+@media screen and (max-width: 1100px) and (min-width: 901px)
+    .thankyou-title
+        height: 20%
+    
+    .thankyou-body 
+        heeight: 60%
