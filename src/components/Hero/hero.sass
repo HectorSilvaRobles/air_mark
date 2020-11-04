@@ -104,12 +104,12 @@ $main-color: #0026C6
 
 
 // Mobile view
-@media screen and (max-width: 500px)
+@media screen and (max-width: 900px)
     .hero
         height: 650px
 
     .hero-info
-        height: 60%
+        height: 65%
         width: 100%
     
     .hero-text
@@ -128,20 +128,21 @@ $main-color: #0026C6
         flex-direction: column
         justify-content: space-evenly
 
-    .hero-button > button
+    .hero-button > button, .hero-button > a
         width: 70%
         height: 35%
-        margin: 10px 0
+        margin: 5px 0
 
 
-@media screen and (max-width: 800px) and (min-width: 501px)
-    .hero
-        height: 650px
+@media screen and (max-width: 700px) and (min-width: 501px)
     
     .hero-info 
-        height: 50%
+        height: 67%
         width: 90%
     
+    .hero-text
+        height: 55%
+
     .hero-text > h1
         font-size: calc(60px + (70 - 60) * ((100vw - 501px) / (800 - 501)))
         margin-bottom: 10px
@@ -150,14 +151,47 @@ $main-color: #0026C6
         font-size: calc(30px + (35 - 30) * ((100vw - 501px) / (800 - 501)))
         width: 70%;
     
-    .hero-button > button
-        width: 40%
-        height: 80%
+    .hero-button
+        height: 45%
+        justify-content: space-around
+
+    .hero-button > button, .hero-button > a
+        width: 70%
+        height: 40%
         margin: 0 20px
 
 
+@media screen and (min-width: 701px) and (max-width: 900px)
+    .hero-info
+        width: 90%
+        height: 70%
+        align-items: center
+    
+    .hero-info
+        align-items: center
+    
+    .hero-text
+        height: 55%
+
+    .hero-text > h1
+        font-size: calc(70px + (75 - 70) * ((100vw - 701px) / (900 - 701)))
+        margin-bottom: 10px
+    
+    .hero-text > h2
+        width: 65%
+        font-size: calc(35px + (38 - 35) * ((100vw - 701px) / (900 - 701)))
+    
+    .hero-button
+        height: 45%
+        justify-content: space-around
+    
+    .hero-button > button, .hero-button > a
+        height: 40%
+        width: 60%
+
+
 // Tablet View
-@media screen and (max-width: 1100px) and (min-width: 801px)
+@media screen and (max-width: 1100px) and (min-width: 901px)
     .hero
         height: 650px
     
@@ -178,14 +212,14 @@ $main-color: #0026C6
     .hero-button
         height: 40%
 
-    .hero-button > button 
+    .hero-button > button, .hero-button > a
         margin: 0 30px
         width: 35%
         height: 90%
 
 
 // Small Laptop View
-@media screen and (min-width: 1101px) and (max-width: 1300px)
+@media screen and (min-width: 1101px) and (max-width: 1450px)
     .hero
         height: 700px
 
@@ -195,7 +229,7 @@ $main-color: #0026C6
     .hero-text > h1
         margin-bottom: 10px
     
-    .hero-button > button
+    .hero-button > button, .hero-button > a
         width: 30%
         margin: 0 30px
 

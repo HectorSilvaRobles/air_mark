@@ -53,10 +53,10 @@ $card-shadow: 0px 0px 10px 0px rgba(92,92,92,0.4)
     justify-content: center
 
 .view-content > .active-option
-    background: $main-color
+    box-shadow: 0 0 0 5px $main-color
 
 .view-content > .active-option > svg, .view-content > .active-option > h1
-    color: white
+    color: $main-color
 
 .view-content > div > svg
     width: 25%
@@ -67,8 +67,8 @@ $card-shadow: 0px 0px 10px 0px rgba(92,92,92,0.4)
     font-weight: bold
     font-family: arial
     font-size: 25px
-    width: 70%
     color: $second-color
+    width: 60%
 
 .view-button
     height: 20%
@@ -94,3 +94,33 @@ $card-shadow: 0px 0px 10px 0px rgba(92,92,92,0.4)
 .view-button > .modal-button-active, .modal-button-active
     background: $main-color !important
     cursor: pointer
+
+
+@media screen and (max-width: 900px)
+    .view-title > h1
+        font-size: calc(35px + (40 - 35) * ((100vw - 300px) / (600 - 300)));
+    .view-title > h2
+        font-size: calc(20px + (24 - 20) * ((100vw - 300px) / (600 - 300)));
+    
+    .view-content > div
+        justify-content : center
+
+    .view-content > div > svg
+        height: 30px
+        width: 25%
+    
+    .view-content > div > h1
+        width: 70%
+        font-size: calc(18px + (22 - 18) * ((100vw - 300px) / (600 - 300)));
+
+
+@media screen and (min-width: 1800px)
+    .view-content > div > svg
+        height: 40px
+        width: 25%
+
+    .view-content > div > h1
+        width: 60%
+        font-size: calc(24px + (28 - 24) * ((100vw - 1800px) / (2200 - 1800)));
+
+

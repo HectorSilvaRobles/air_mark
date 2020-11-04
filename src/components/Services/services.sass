@@ -156,6 +156,7 @@ $card-shadow: 0px 5px 10px 0px rgba(92,92,92,0.4)
     
     .services-header > h1
         font-size: calc(45px + (55 - 45) * ((100vw - 300px) / (600 - 300)));
+        text-align: center
         width: 90%
     
     .services-header > h2
@@ -171,29 +172,29 @@ $card-shadow: 0px 5px 10px 0px rgba(92,92,92,0.4)
         flex-wrap: none
     
     .services-main-card
-        height: 50%
+        height: 45%
     
     .services-main-card > div
         width: 100%
 
     .services-main-card > div > svg
-        font-size: 90px
+        font-size: 70px
 
     .services-main-card > div > h1
         font-size: calc(24px + (30 - 24) * ((100vw - 300px) / (600 - 300)))
         margin: 0
+       
     
     .services-main-card > div > p
         font-size: calc(18px + (22 - 18) * ((100vw - 300px) / (600 - 300)))
-        margin: 10px 0
-        width: 85%
+        width: 90%
     
     .services-main-card > div > button
-        margin: 5px 0
+        margin: 10px 0
         height: 20%
         
     .services-options
-        height: 50%
+        height: 55%
     
     .services-options > div, #active-card
         width: 100%
@@ -213,24 +214,46 @@ $card-shadow: 0px 5px 10px 0px rgba(92,92,92,0.4)
         text-align: start
 
 
-
-@media screen and (max-width: 900px) and (min-width: 501px)
+@media screen and (min-width: 501px) and (max-width: 700px)
     .services
         height: 1200px
     
+    .services-header
+        width: 90%
+        height: 12%
+    
     .services-body
         width: 80%
+
+    .main-card, .services-options
+        height: 50%
+    
+    .services-main-card > div > p
+        margin: 5px
+
+
+@media screen and (max-width: 900px) and (min-width: 701px)
+    .services
+        height: 1200px
+    
+    .services-header
+        height: 10%
+        margin-bottom: 10px
+
+    .services-body
+        width: 60%
+        height: 65%
     
     .services-header > h1
-        font-size: calc(50px + (60 - 50) * ((100vw - 501px) / (700 - 501)));
+        font-size: calc(50px + (55 - 50) * ((100vw - 700px) / (900 - 700)));
         width: 90%
     
     .services-header > h2
-        font-size: calc(24px + (30 - 24) * ((100vw - 501px) / (700 - 501)));
-        width: 70%
+        font-size: calc(25px + (30 - 25) * ((100vw - 700px) / (900 - 700)));
+        width: 50%
 
     .services-main-card > div > svg
-        font-size: 90px
+        font-size: 70px
 
     .services-main-card > div > h1
         font-size: calc(24px + (30 - 24) * ((100vw - 501px) / (800 - 501)))
@@ -238,14 +261,19 @@ $card-shadow: 0px 5px 10px 0px rgba(92,92,92,0.4)
     
     .services-main-card > div > p
         font-size: calc(18px + (22 - 18) * ((100vw - 501px) / (800 - 501)))
-        margin: 10px 0
-        width: 70%
+        margin: 5px 0
+        width: 85%
 
+    .services-options > div > svg
+        font-size: calc(30px + (35 - 30) * ((100vw - 300px) / (600 - 300)))
+        margin: 0
+        width: 25%
 
-
-@media screen and (max-width: 900px) and (min-width: 701px)
-    .services-body
-        width: 70%
+    .services-options > div > h1
+        font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (600 - 300)))
+        margin: 0
+        width: 60%
+        text-align: start
 
     
 

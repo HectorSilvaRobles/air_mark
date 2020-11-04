@@ -3,7 +3,7 @@ import {FaTruckLoading, FaTruckMoving, FaTools, FaWarehouse} from 'react-icons/f
 import './view1.sass'
 
 const View1 = (props) => {
-    const [serviceState, setServiceState] = useState([])
+    const [serviceState, setServiceState] = useState(props.state.services)
 
     // add service to state just once
     const addToService = (service) => {
@@ -28,14 +28,14 @@ const View1 = (props) => {
                     className={serviceState.includes('install & reconfigure office') ? 'active-option' : null}
                 >
                     <FaTools />
-                    <h1>Install & Reconfigure Office</h1>
+                    <h1>Install & Reconfigure</h1>
                 </div>
                 <div 
                     onClick={() => addToService('furniture delivery & pickup') } 
                     className={serviceState.includes('furniture delivery & pickup') ? 'active-option' : null}
                 >
                     <FaTruckMoving />
-                    <h1>Furniture Delivery & Pickup</h1>
+                    <h1>Delivery & Pickup</h1>
                 </div>
                 <div 
                     onClick={() => addToService('office relocation & moving') } 
@@ -43,14 +43,14 @@ const View1 = (props) => {
 
                 >
                     <FaTruckLoading />
-                    <h1>Office Relocation & Moving</h1>
+                    <h1>Relocation & Moving</h1>
                 </div>
                 <div 
                     onClick={() => addToService('warehousing & storage') }
                     className={serviceState.includes('warehousing & storage') ? 'active-option' : null}
                 >
                     <FaWarehouse />
-                    <h1>Warehousing & Storage</h1>
+                    <h1>Warehouse & Storage</h1>
                 </div>
             </div>
             <div className='view-button'>
