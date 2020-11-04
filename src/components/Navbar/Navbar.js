@@ -3,6 +3,7 @@ import {Link} from 'react-scroll'
 import Backdrop from './Hamburger/Backdrop/Backdrop'
 import SideDrawer from './Hamburger/SideDrawer/SideDrawer'
 import ToggleButton from './Hamburger/Togglebutton/ToggleButton'
+import Logo from '../../assets/logo.png'
 import './navbar.sass'
 
 const Navbar = () => {
@@ -21,7 +22,7 @@ const Navbar = () => {
 
     return (
         <div className='navbar'>
-            <div className='navbar-logo'></div>
+            <div className='navbar-logo'><img src={Logo} /></div>
             <div className='navbar-menu'>
                 <Link
                     activeClass='active-menu'

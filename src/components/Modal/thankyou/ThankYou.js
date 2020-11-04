@@ -1,8 +1,16 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {IoMdClose} from 'react-icons/io'
+import axios from 'axios'
 import './thankyou.sass'
 
 const ThankYou = (props) => {
+    // Send notification to Mark
+    useEffect(() => {
+        axios.post(process.env.REACT_APP_NOTIFY_API, props.state)
+        .then(res => console.log(res))
+        .catch(err => console.log(err))
+    }, [])
+
     return (
         <div className='thankyou'>
             <div className='thankyou-title'>

@@ -31,6 +31,7 @@ export default class Modal extends Component {
 
     render(){
         console.log(this.state)
+        console.log(process.env.REACT_APP_NOTIFY_API)
         return (
             <div className={this.state.view === 'thankyou' ? 'modal-thankyou' : 'modal'}>
                 {this.state.view === 'thankyou' ? null : 
@@ -39,8 +40,14 @@ export default class Modal extends Component {
                             {this.state.view === 'view2' ? <ImArrowLeft onClick={() => this.handleView('view1')} /> : null}
                         </div>
                         <div className='modal-dots'>
-                            <div onClick={() => this.handleView('view1')} className={this.state.view === 'view1' ? 'modal-dot-active' : null}></div>
-                            <div onClick={() => this.handleView('view2')} className={this.state.view === 'view2' ? 'modal-dot-active' : null}></div>
+                            <div 
+                                onClick={() => this.handleView('view1')} 
+                                className={this.state.view === 'view1' ? 'modal-dot-active' : null}
+                             />
+                            <div 
+                                onClick={() => this.handleView('view2')} 
+                                className={this.state.view === 'view2' ? 'modal-dot-active' : null} 
+                            />
                         </div>
                         <div className='modal-top-space'>
                             <IoMdClose onClick={this.props.onClose} />
@@ -64,7 +71,7 @@ export default class Modal extends Component {
                          /> 
                          : 
                          null}
-                    {this.state.view === 'thankyou' ? <ThankYou onClose={this.props.onClose} /> : null}
+                    {this.state.view === 'thankyou' ? <ThankYou state={this.state} onClose={this.props.onClose} /> : null}
                     
                 </div>
             </div>

@@ -65,14 +65,14 @@ const Services = () => {
                     <div
                         onClick={() => setMainCard({
                             "icon": <FaWarehouse />,
-                            "title" : "Warehouse & Storage",
+                            "title" : "Warehousing & Storage",
                             "description": "Short description of the service. Keep It simple, between 2-3 sentences. This would be the third sentence.",
                             "cardId": 4
                         })}
                         id={mainCard["cardId"] === 4 ? 'active-card' : null}
                     >
                         <FaWarehouse />
-                        <h1>Warehouse & Storage</h1>
+                        <h1>Warehousing & Storage</h1>
                     </div>
 
                 </div>
