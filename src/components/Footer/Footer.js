@@ -6,11 +6,10 @@ const Footer = () => {
     return (
         <div className='footer'>
             <div className='footer-cta'>
-                <h1>Interested? Lets Begin.</h1>
+                <h1>Enhance Your Office Space.</h1>
                 <button>Get Quote</button>
             </div>
             <div className='footer-menu'>
-                <div className='footer-logo'></div>
                 <Link
                     activeClass='active-menu'
                     to='hero'
