@@ -1,8 +1,22 @@
 import React, {useState} from 'react'
+import Modal from '@material-ui/core/Modal'
+import ModalForm from '../Modal/Modal'
+import Backdrop from '@material-ui/core/Backdrop';
+import Fade from '@material-ui/core/Fade';
 import {FaTruckLoading, FaTruckMoving, FaTools, FaWarehouse} from 'react-icons/fa'
 import './services.sass'
 
 const Services = () => {
+    // open modal
+    const [open, setOpen] = useState(false)
+    const handleOpen = () =>{
+        setOpen(true)
+    }
+    const handleClose = () =>{
+        setOpen(false)
+    }
+
+    // Initial State
     const [mainCard, setMainCard] = useState({
         "icon": <FaTools />,
         "title" : "Install & Reconfigure",
@@ -22,7 +36,21 @@ const Services = () => {
                         {mainCard["icon"]}
                         <h1>{mainCard["title"]}</h1>
                         <p>{mainCard["description"]}</p>
-                        <button>Get Quote</button>
+                        <button onClick={handleOpen}>Get Quote</button>
+                        <Modal
+                            open={open}
+                            onClose={handleClose}
+                            closeAfterTransition
+                            className={'modal-backdrop'}
+                            BackdropComponent={Backdrop}
+                            BackdropProps={{
+                                timeout: 500,
+                            }}
+                        >   
+                            <Fade in={open}>
+                                <ModalForm onClose={handleClose} />
+                            </Fade>
+                        </Modal>
                     </div>
                 </div>
                 <div className='services-options'>

@@ -38,7 +38,7 @@ const Navbar = () => {
                     spy={true}
                     smooth={true}
                     duration={500}
-                    // offset={-70}
+                    offset={70}
                 >Services</Link>
                 <Link
                     activeClass='active-menu'
